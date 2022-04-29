@@ -1,0 +1,38 @@
+﻿.logo-center {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.text-logo {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    justify-content: center;
+    top: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding-bottom: 75px;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 2px solid #010100;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    padding: 15px;
+}

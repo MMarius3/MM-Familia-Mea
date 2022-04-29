@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Styles.Render("~/Content/Custom/buttonBundle")
+
+<head>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #000000;
+            font-family: 'Rouge Script', cursive;
+            font-size: 70px;
+            font-weight: normal;
+            margin: 0 0 50px;
+            text-align: center;
+            text-shadow: 1px 1px 2px #082b34;
+            line-height: 2em;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+
+        .mySlides {
+            display: none;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 3px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+
+
+        #cf {
+            position: relative;
+            height: 500px;
+            width: 750px;
+            margin: 0 auto;
+        }
+
+            #cf img {
+                position: absolute;
+                left: 0;
+                -webkit-transition: opacity 1s ease-in-out;
+                -moz-transition: opacity 1s ease-in-out;
+                -o-transition: opacity 1s ease-in-out;
+                transition: opacity 1s ease-in-out;
+            }
+
+        @@keyframes cf3FadeInOut {
+            0% {
+                opacity: 1;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            55% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #cf img.top {
+            animation-name: cf3FadeInOut;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            align-items: center;
+            width: 750px;
+            height: 500px;
+            margin-top: -70px;
+        }
+
+        #cf img.bottom {
+            align-items: center;
+            width: 750px;
+            height: 500px;
+            margin-top: -70px;
+        }
+
+        #cf img.transparent {
+            opacity: 0;
+        }
+
+        #cf_onclick {
+            cursor: pointer;
+        }
+
+        @@media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        .font2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #000000;
+        }
+
+        .fullheight {
+            height: 100%;
+        }
+
+        .mastwrap {
+            padding-top: 48px;
+            width: 170%;
+            margin-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        .valign {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .images-column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .images-row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .images-align {
+            position: relative;
+            width: 33%; /* desired width */
+        }
+
+            .images-align:before {
+                content: "";
+                float: left;
+                padding-top: 100%; /* initial ratio of 1:1*/
+            }
+    </style>
+</head>
+
+<div class="jumbotron">
+    <div class="logo-center">
+        <div class="logo">
+            Familia Mea
+        </div>
+    </div>
+    <p class="text-logo"> Jurnalul de familie care reconecteaza generatiile.</p>
+    <div class="center-2">
+        <div class="btn-2">
+            <a href='@Url.Action("Index", null, new { area = string.Empty, controller = "Album" }, Request.Url.Scheme)'><span>Vezi Album</span></a>
+        </div>
+    </div>
+</div>
+
+
+<div id="cf">
+    <img class="bottom" src="~/Content/Images/Others/family_home1.png" />
+    <img class="top" src="~/Content/Images/Others/family_home2.png" />
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>De la lumea digitala</h2>
+        <p>
+            Astazi toti comunicam din ce in ce mai mult prin intermediul retelelor sociale.
+            Informatiile partajate sunt o sursa de schimb de idei si conversatie. Dar lumea digitala nu este accesibila tuturor.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h2>La familia reala</h2>
+        <p>
+            Pentru varstnici este o bariera care creeaza un sentiment de excludere si, sa recunoastem, nu este intotdeauna usor sa-i tinem la curent cu viata noasta de zi cu zi.
+            Pentru a reconecta generatiile, FAMILIA MEA ofera o solutie personalizata in functie de nevoile individuale.
+        </p>
+    </div>
+</div>
+
+<div style="padding-top:75px">
+    <div class="showcase-carousel images-row">
+        <div class="item showcase-carousel-04 images-column images-align">
+        </div>
+        <div class="item showcase-carousel-05 images-column images-align">
+        </div>
+        <div class="item showcase-carousel-06 images-column images-align">
+        </div>
+    </div>
+</div>
+
+
+@if (Request.IsAuthenticated)
+{
+    <div class="center">
+        <div class="btn-1">
+            <a href='@Url.Action("Index", null, new { area = string.Empty, controller = "Subscriptions" }, Request.Url.Scheme)'><span>Abonamente</span></a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="center-2">
+        Pentru a te abona, trebuie sa te loghezi.
+        Nu ai cont? Inregistreaza-te: <div class="btn-1">
+            <a href='@Url.Action("Register", null, new { area = string.Empty, controller = "Account" }, Request.Url.Scheme)'><span>aici</span></a>
+        </div>
+    </div>
+}
+
+

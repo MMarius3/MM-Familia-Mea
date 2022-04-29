@@ -1,0 +1,87 @@
+﻿
+/*showcase-carouselS*/
+
+.showcase-carousel-01 {
+    background-image: url('../Images/Subscriptions/1luna.png');
+}
+
+.showcase-carousel-02 {
+    background-image: url('../Images/Subscriptions/6luni.png');
+}
+
+.showcase-carousel-03 {
+    background-image: url('../Images/Subscriptions/12luni.png');
+}
+
+.showcase-carousel-04 {
+    background-image: url('../Images/HomeSubscriptions/home-1luna.png');
+}
+
+.showcase-carousel-05 {
+    background-image: url('../Images/HomeSubscriptions/home-6luni.png');
+}
+
+.showcase-carousel-06 {
+    background-image: url('../Images/HomeSubscriptions/home-12luni.png');
+}
+
+.showcase-carousel {
+    cursor: url("../images/Others/drag.png") 40 40, crosshair;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+    .showcase-carousel .item {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+.showcase-carousels-overlay {
+    background-color: rgba(255,255,255,0.6);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.showcase-carousel .item:hover .showcase-carousels-overlay {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.showcase-carousels-overlay a {
+    cursor: url("../images/Others/view.png") 40 40, crosshair;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.showcase-carousels-overlay h1 {
+}
+
+    .showcase-carousels-overlay h1 > span {
+        border: solid 4px;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 15px 15px 15px 21px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Familia Mea - Album Section";
+    ViewData["MetaDescription"] = "Model de album / Creare de album";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Custom/album.css">
+</head>
+
+<h1>
+    Aici poti vedea un model de album.
+</h1>
+
+<div class="cover">
+    <div class="book">
+        <label for="page-1" class="book__page book__page--1">
+            <img src="~/Content/Images/Album/familia_revista_1.png" alt="">
+        </label>
+
+        <label for="page-2" class="book__page book__page--4">
+            <img src="~/Content/Images/Album/familia_revista_4.png" alt="">
+        </label>
+
+        <!-- Resets the page -->
+        <input type="radio" name="page" id="page-1" />
+
+        <!-- Goes to the second page -->
+        <input type="radio" name="page" id="page-2" />
+        <label class="book__page book__page--2">
+            <span class="book__page-front">
+                <img src="~/Content/Images/Album/familia_revista_2.png" alt="">
+            </span>
+            <span class="book__page-back">
+                <img src="~/Content/Images/Album/familia_revista_3.png" alt="">
+            </span>
+        </label>
+    </div>
+</div>

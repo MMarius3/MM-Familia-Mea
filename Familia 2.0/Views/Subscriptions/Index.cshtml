@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Familia Mea - Abonamente Section";
+    ViewData["MetaDescription"] = "3 types of subscriptions";
+}
+
+@Styles.Render("~/Content/Custom/buttonBundle")
+
+<head>
+    <style>
+
+        .font2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #000000;
+        }
+
+        .fullheight {
+            height: 100%;
+        }
+
+        .mastwrap {
+            padding-top: 48px;
+            width: 170%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        .valign {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<section class="mastwrap fullheight">
+    <div class="showcase-carousel owl-carousel">
+        <div class="item showcase-carousel-01 fullheight" style="height: 1210px">
+            <div class="showcase-carousels-overlay fullheight">
+                <div class="carousel-caption-belt valign text-center">
+                    <a href="@Url.Action("OneMonth", null, new { area = string.Empty, controller = "Subscriptions" }, Request.Url.Scheme)" style="text-decoration: none">
+                        <h1 class="black font2"><span>aboneaza-te</span></h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item showcase-carousel-02 fullheight" style="height: 1210px ">
+            <div class="showcase-carousels-overlay fullheight">
+                <div class="carousel-caption-belt valign text-center">
+                    <a href="@Url.Action("HalfYear", null, new { area = string.Empty, controller = "Subscriptions" }, Request.Url.Scheme)" style="text-decoration: none">
+                        <h1 class="black font2"><span>aboneaza-te</span></h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item showcase-carousel-03 fullheight" style="height: 1210px ">
+            <div class="showcase-carousels-overlay fullheight">
+                <div class="carousel-caption-belt valign text-center">
+                    <a href="@Url.Action("OneYear", null, new { area = string.Empty, controller = "Subscriptions" }, Request.Url.Scheme)" style="text-decoration: none">
+                        <h1 class="black font2"><span>aboneaza-te</span></h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="margin-top:1200px">
+    <button onclick="location.href='@Url.Action("Index", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)'" class="btn-3" role="button"> <span class="text"> Inapoi</span> <span> Acasa</span> </button>
+</section>
+
+@section Scripts {
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/carousel-init.js"></script>
+    <script src="~/Scripts/button-init.js"></script>
+}
+
+
+
+
